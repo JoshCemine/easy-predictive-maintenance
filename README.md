@@ -2,20 +2,6 @@
 
 A binary classifier that predicts industrial machine failures from sensor readings, using the UCI AI4I 2020 dataset. Built as a reference implementation for the AMCS AI Engineer prep work.
 
-## What this exercises
-
-- sklearn `Pipeline` + `ColumnTransformer` for clean train/test handling
-- `GridSearchCV` for hyperparameter search with cross-validation
-- Class imbalance handling (~3.4% positive rate) — uses `average_precision` as the search metric and tunes the decision threshold post-fit
-- Proper evaluation: ROC-AUC, PR-AUC, confusion matrix at tuned threshold
-- A small test suite that asserts data invariants
-
-## JD coverage
-
-- "Proficiency in Python ... and relevant ML libraries"
-- "Strong problem-solving and analytical skills"
-- "Ensure good quality code with high levels of code coverage" (tests cover data invariants)
-
 ## How to run
 
 ```powershell
@@ -71,10 +57,3 @@ tests/
 data/
 └── README.md       # dataset description + manual download instructions
 ```
-
-## What to try next
-
-1. **Swap the classifier**: replace `GradientBoostingClassifier` with `RandomForestClassifier` or `HistGradientBoostingClassifier` and compare.
-2. **Add SMOTE**: install `imbalanced-learn` and put `SMOTE` in the pipeline. Compare metrics — does it help on this dataset?
-3. **Per-failure-mode breakdown**: the dataset has five failure-mode flags (`TWF`, `HWF`, `PWF`, `OSF`, `RNF`) that we currently drop. Turn the problem into multi-label classification.
-4. **Connect to prep project #4**: feed the trained model into Fairlearn and audit predictions across the `Type` feature (L/M/H) — see whether the model is biased against any machine class.
