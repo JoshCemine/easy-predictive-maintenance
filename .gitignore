@@ -9,3 +9,6 @@ metrics.json
 !docs/*.png
 data/*.csv
 !data/README.md
+
+CLAUDE.md
+lessons/*
