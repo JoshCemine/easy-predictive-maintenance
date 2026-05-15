@@ -1,4 +1,4 @@
-# Easy Sample — Predictive Maintenance Classifier
+# Predictive Maintenance Classifier
 
 A binary classifier that predicts industrial machine failures from sensor readings, using the UCI AI4I 2020 dataset. Built as a reference implementation for the AMCS AI Engineer prep work.
 
